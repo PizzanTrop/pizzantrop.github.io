@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="" />
+        <script src=""></script>
+    </head>
+    <body>
+        <div class="monitoring"><div class="progress-group">
+    <span class="progress-text">Онлайн :</span>
+    <span class="progress-number">2073/2074</span>
+		
+    <div class="progress">
+	<div class="progress-bar progress-bar-aqua" style="width:99.951783992285%"></div>
+    </div>
+</div>
+
+        </div>
+    </body>
+</html>

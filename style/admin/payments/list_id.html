@@ -1,0 +1,8 @@
+<tr>
+	<td><?php echo $data['username']; ?></td>
+	<td><?php echo getTime($data['time']); ?></td>
+	<td><?php echo ($data['status'] == 1) ? '<span style="color:#FF5722;font-weight: bold">Оплачен</span>' : '<span style="color: #FF9800;">Ожидание оплаты</span>'; ?></td>
+	<td class="text-center">
+		<a href="?mode=payments&do=view&id=<?php echo $data['id']; ?>"><i class="eye icon"></i></a>
+	</td>
+</tr>

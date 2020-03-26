@@ -1,0 +1,156 @@
+<form method="POST">
+<div class="ui top attached tabular menu">
+	<a class="item active" data-tab="interkassa">Настройки InterKassa</a>
+	<a class="item" data-tab="unitpay">Настройки UnitPay</a>
+	<a class="item" data-tab="freekassa">Настройки FreeKassa</a>
+	<a class="item" data-tab="robokassa">Настройки RoboKassa</a>
+	<a class="item" data-tab="mykassa">Настройки MyKassa</a>
+</div>
+<div class="ui bottom attached tab segment active" data-tab="interkassa">
+
+	<div class="field">
+    	<div class="ui checkbox <?php echo ($config['merchant']['ik_enable']) ? 'checked' : '' ?>">
+      		<input name="ik_enable" id="ik_enable" type="checkbox" <?php echo ($config['merchant']['ik_enable']) ? 'checked' : '' ?> class="hidden">
+      		<label>Включить?</label>
+    	</div>
+  	</div>
+
+	<div class="field">
+		<label for="ik_shop_id">ID Магазина:</label>
+		<div class="ui input fluid">
+			<input name="ik_shop_id" id="ik_shop_id" type="text" value="<?php echo $config['merchant']['ik_shop_id']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="ik_secret_key">Секретный ключ:</label>
+		<div class="ui input fluid">
+			<input name="ik_secret_key" id="ik_secret_key" type="text" value="<?php echo $config['merchant']['ik_secret_key']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="ik_testing">Принимать тестовые платежи:</label>
+
+		<div class="ui selection fluid dropdown">
+			<input type="hidden" name="ik_testing" value="<?php echo ($config['merchant']['ik_testing'] == true) ? 1 : 0; ?>">
+			<i class="dropdown icon"></i>
+			<div class="default text">Приём тестовых платежей</div>
+			<div class="menu">
+				<div class="item <?php echo (!$config['merchant']['ik_testing']) ? 'active' : ''; ?>" data-value="0">Выключено</div>
+				<div class="item <?php echo ($config['merchant']['ik_testing']) ? 'active' : ''; ?>" data-value="1">Включено</div>
+			</div>
+		</div>
+	</div>
+	<div class="field">
+		<label for="ik_testing_key">Ключ тестирования:</label>
+		<div class="ui input fluid">
+			<input name="ik_testing_key" id="ik_testing_key" type="text" value="<?php echo $config['merchant']['ik_testing_key']; ?>">
+		</div>
+	</div>
+</div>
+<div class="ui bottom attached tab segment" data-tab="unitpay">
+	<div class="field">
+    	<div class="ui checkbox <?php echo ($config['merchant']['up_enable']) ? 'checked' : '' ?>">
+      		<input name="up_enable" id="up_enable" type="checkbox" <?php echo ($config['merchant']['up_enable']) ? 'checked' : '' ?> class="hidden">
+      		<label>Включить?</label>
+    	</div>
+  	</div>
+	<div class="field">
+		<label for="up_shop_id">Публичный ключ магазина:</label>
+		<div class="ui input fluid">
+			<input name="up_shop_id" id="up_shop_id" type="text" value="<?php echo $config['merchant']['up_shop_id']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="up_secret_key">Секретный ключ:</label>
+		<div class="ui input fluid">
+			<input name="up_secret_key" id="up_secret_key" type="text" value="<?php echo $config['merchant']['up_secret_key']; ?>">
+		</div>
+	</div>
+</div>
+<div class="ui bottom attached tab segment" data-tab="freekassa">
+	<div class="field">
+    	<div class="ui checkbox <?php echo ($config['merchant']['fk_enable']) ? 'checked' : '' ?>">
+      		<input name="fk_enable" id="fk_enable" type="checkbox" <?php echo ($config['merchant']['fk_enable']) ? 'checked' : '' ?> class="hidden">
+      		<label>Включить?</label>
+    	</div>
+  	</div>
+	<div class="field">
+		<label for="fk_shop_id">ID Магазина:</label>
+		<div class="ui input fluid">
+			<input name="fk_shop_id" id="fk_shop_id" type="text" value="<?php echo $config['merchant']['fk_shop_id']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="fk_shop_key_1">Секретный ключ #1:</label>
+		<div class="ui input fluid">
+			<input name="fk_shop_key_1" id="fk_shop_key_1" type="text" value="<?php echo $config['merchant']['fk_shop_key_1']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="fk_shop_key_2">Секретный ключ #2:</label>
+		<div class="ui input fluid">
+			<input name="fk_shop_key_2" id="fk_shop_key_2" type="text" value="<?php echo $config['merchant']['fk_shop_key_2']; ?>">
+		</div>
+	</div>
+</div>
+<div class="ui bottom attached tab segment" data-tab="robokassa">
+	<div class="field">
+    	<div class="ui checkbox <?php echo ($config['merchant']['rk_enable']) ? 'checked' : '' ?>">
+      		<input name="rk_enable" id="rk_enable" type="checkbox" <?php echo ($config['merchant']['rk_enable']) ? 'checked' : '' ?> class="hidden">
+      		<label>Включить?</label>
+    	</div>
+  	</div>
+	<div class="field">
+		<label for="rk_shop_id">ID Магазина:</label>
+		<div class="ui input fluid">
+			<input name="rk_shop_id" id="rk_shop_id" type="text" value="<?php echo $config['merchant']['rk_shop_id']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="rk_shop_key_1">Секретный ключ #1:</label>
+		<div class="ui input fluid">
+			<input name="rk_shop_key_1" id="rk_shop_key_1" type="text" value="<?php echo $config['merchant']['rk_shop_key_1']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="rk_shop_key_2">Секретный ключ #2:</label>
+		<div class="ui input fluid">
+			<input name="rk_shop_key_2" id="rk_shop_key_2" type="text" value="<?php echo $config['merchant']['rk_shop_key_2']; ?>">
+		</div>
+	</div>
+</div>
+<div class="ui bottom attached tab segment" data-tab="mykassa">
+	<div class="field">
+    	<div class="ui checkbox <?php echo ($config['merchant']['mk_enable']) ? 'checked' : '' ?>">
+      		<input name="mk_enable" id="mk_enable" type="checkbox" <?php echo ($config['merchant']['mk_enable']) ? 'checked' : '' ?> class="hidden">
+      		<label>Включить?</label>
+    	</div>
+  	</div>
+	<div class="field">
+		<label for="mk_shop_id">ID Магазина:</label>
+		<div class="ui input fluid">
+			<input name="mk_shop_id" id="mk_shop_id" type="text" value="<?php echo $config['merchant']['mk_shop_id']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="mk_shop_key_1">Секретный ключ #1:</label>
+		<div class="ui input fluid">
+			<input name="mk_shop_key_1" id="mk_shop_key_1" type="text" value="<?php echo $config['merchant']['mk_shop_key_1']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="mk_shop_key_2">Секретный ключ #2:</label>
+		<div class="ui input fluid">
+			<input name="mk_shop_key_2" id="mk_shop_key_2" type="text" value="<?php echo $config['merchant']['mk_shop_key_2']; ?>">
+		</div>
+	</div>
+</div>
+<br>
+<input class="ui button primary" value="Сохранить" type="submit">
+</form>
+
+<script type="text/javascript">
+$('.menu .item').tab();
+$('.ui.checkbox').checkbox();
+$('.ui.dropdown').dropdown();
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- KobaltMR -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Авторизация - ПУ</title>
+	<link rel="stylesheet" type="text/css" href="style/css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="style/css/admin.css">
+</head>
+<body>
+	<div class="auth-block">
+		<?php echo MessageShow(); ?>
+
+		<div class="ui raised segments">
+			<div class="ui segment">
+				<p>Авторизация</p>
+			</div>
+			<div class="ui segment">
+				<form action="/cpanel.php?do=login" method="POST">
+					<p>
+						<label for="login">Логин:</label>
+						<div class="ui input fluid">
+							<input name="login" id="login" type="text" required maxlength="20">
+						</div>
+					</p>
+					<p>
+						<label for="password">Пароль:</label>
+						<div class="ui input fluid">
+							<input name="password" id="password" type="password" required maxlength="50">
+						</div>
+					</p>
+					<br>
+					<p><input type="submit" class="ui button primary fluid" value="Войти"></p>
+				</form>
+			</div>
+			<div class="ui segment">
+				<p id="copy-1">&copy; <?php echo $config['main']['site_name']; ?>. Script by <a target="_blank" href="http://kobaltmr.ru/">KobaltMR</a></p>
+			</div>
+		</div>	
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="style/js/semantic.min.js"></script>
+</body>
+</html>
+<!-- KobaltMR -->

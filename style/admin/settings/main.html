@@ -1,0 +1,51 @@
+<h2 class="ui header">Основные настройки:</h2>
+<form method="POST">
+	<div class="field">
+		<label for="site_name">Название сайта:</label>
+		<div class="ui input fluid">
+			<input name="site_name" id="site_name" type="text" value="<?php echo $config['main']['site_name']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="vk_url">Ссылка на группу ВК:</label>
+		<div class="ui input fluid">
+			<input name="vk_url" id="vk_url" type="text" value="<?php echo $config['main']['vk_url']; ?>">
+		</div>
+	</div>
+<h2 class="ui header">Настройки БД:</h2>
+	<div class="field">
+		<label for="db_host">Адресс базы данных:</label>
+		<div class="ui input fluid">
+			<input name="db_host" id="db_host" type="text" value="<?php echo $config['main']['db_host']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="db_port">Порт базы данных:</label>
+		<div class="ui input fluid">
+			<input name="db_port" id="db_port" type="text" value="<?php echo $config['main']['db_port']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="db_name">Название базы данных:</label>
+		<div class="ui input fluid">
+			<input name="db_name" id="db_name" type="text" value="<?php echo $config['main']['db_name']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="db_user">Пользователь базы данных:</label>
+		<div class="ui input fluid">
+			<input name="db_user" id="db_user" type="text" value="<?php echo $config['main']['db_user']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="db_pass">Пароль базы данных:</label>
+		<div class="ui input fluid">
+			<input name="db_pass" id="db_pass" type="text" placeholder="СКРЫТ">
+		</div>
+	</div>
+
+	<br>
+	<div class="field">
+		<input class="ui button primary" value="Сохранить" type="submit">
+	</div>
+</form>

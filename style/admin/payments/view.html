@@ -1,0 +1,22 @@
+<p><b>Статус:</b> <?php echo ($row['status'] == 1) ? '<span style="color:#FF5722;font-weight: bold">Оплачен</span>' : '<span style="color: #FF9800;">Ожидание оплаты</span>'; ?></p>
+<p><b>Дата платежа:</b> <?php echo $stime; ?></p>
+<p><b>Итог. цена:</b> <?php echo $cost; ?> руб.</p>
+<div class="block-line"></div>
+<p><b>Покупатель:</b> <?php echo $row['username']; ?></p>
+<p><b>Группа:</b> <?php echo $data['goods_name']; ?> (ID: <?php echo $data['goods_id']; ?>)</p>
+<p><b>Цена группы:</b> <?php echo $data['goods_cost']; ?> руб.</p>
+<?php
+if(isset($data['cupon']))
+{
+echo '<p><b>Купон:</b> '.$data['cupon'].'</p>';
+}
+?>
+<p><b>Скидка:</b> <?php echo $data['goods_cupon']; ?>%</p>
+<?php /*<p><b>Доплата:</b> <?php echo ($data['dobuy']) ? 'Да' : 'Нет'; ?></p>*/ ?>
+
+<?php
+if ($row['status'] == 0)
+{
+echo "<p><a href=\"?mode=payments&do=apay&id={$row['id']}\" class=\"ui button primary fluid\">Оплатить (администратор)</a></p>";
+}
+?>

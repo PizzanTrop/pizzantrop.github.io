@@ -1,0 +1,11 @@
+<tr>
+	<td><?php echo $data['id']; ?></td>
+	<td><?php echo $data['name']; ?></td>
+	<td><?php echo $data['cost']; ?> руб.</td>
+	<td><?php echo $data['cupon']; ?>%</td>
+	<td class="text-center">
+		<a href="?mode=goods&do=edit&id=<?php echo $data['id']; ?>"><i class="edit icon"></i></a>
+		|
+		<a href="?mode=goods&do=delete&id=<?php echo $data['id']; ?>"><i class="trash outline icon"></i></a>
+	</td>
+</tr>

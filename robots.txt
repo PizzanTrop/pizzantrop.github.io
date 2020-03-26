@@ -1,0 +1,10 @@
+User-agent: *
+Host: ugw.su
+Disallow: /amodes
+Disallow: /assets
+Disallow: /classes
+Disallow: /images
+Disallow: /online
+Disallow: /payments
+Disallow: /style
+Disallow: /cpanel.php

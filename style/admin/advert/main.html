@@ -1,0 +1,35 @@
+<form class="ui form" method="POST">
+	<div class="field">
+		<label for="title">Заголовок:</label>
+
+		<div class="ui input fluid">
+			<input type="text" name="title" id="title" value="<?php echo $config['advert']['title']; ?>">
+		</div>
+	</div>
+
+	<div class="field">
+		<label for="text">Содержание:</label>
+
+	    <textarea name="text" id="text"><?php echo $config['advert']['text']; ?></textarea>
+	</div>
+
+	<div class="field">
+		<label for="button_name">Название кнопки:</label>
+
+		<div class="ui input fluid">
+			<input type="text" name="button_name" id="button_name" value="<?php echo $config['advert']['button_name']; ?>">
+		</div>
+	</div>
+
+	<div class="field">
+		<label for="button_href">Название кнопки:</label>
+
+		<div class="ui input fluid">
+			<input type="text" name="button_href" id="button_href" value="<?php echo $config['advert']['button_href']; ?>">
+		</div>
+	</div>
+
+	<div class="fluid">
+		<input type="submit" class="ui button primary" value="Сохранить">
+	</div>
+</form>

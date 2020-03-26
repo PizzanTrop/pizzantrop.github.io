@@ -1,0 +1,9 @@
+<tr>
+	<td><?php echo $data['login']; ?></td>
+	<td><?php echo $data['ip']; ?></td>
+	<td class="text-center">
+		<a href="?mode=users&do=edit&id=<?php echo $data['login']; ?>"><i class="edit icon"></i></a>
+		|
+		<a href="?mode=users&do=delete&id=<?php echo $data['login']; ?>"><i class="trash outline icon"></i></a>
+	</td>
+</tr>

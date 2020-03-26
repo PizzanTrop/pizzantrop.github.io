@@ -1,0 +1,45 @@
+<form method="POST">
+	<div class="field">
+		<label for="name">Название:</label>
+		<div class="ui input fluid">
+			<input type="text" name="name" id="name" value="<?php echo $row['name']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="cost">Цена:</label>
+		<div class="ui input fluid">
+			<input type="number" name="cost" id="cost" value="<?php echo $row['cost']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="cupon">Скидка (%):</label>
+		<div class="ui input fluid">
+			<input type="number" name="cupon" id="cupon" value="<?php echo $row['cupon']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="count">Количество:</label>
+		<div class="ui input fluid">
+			<input type="text" name="count" id="count" value="<?php echo $row['count']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<code>Для неограниченного количества, поставьте "-" (тире, без кавычек)</code>
+	</div>
+	<div class="field">
+		<label for="rcon_command">Команда для выдачи:</label>
+		<div class="ui input fluid">
+			<input type="text" name="rcon_command" id="rcon_command" value="<?php echo $row['rcon_command']; ?>">
+		</div>
+	</div>
+	
+	<div class="field"><code>
+		{user} - будет заменено на ник игрока.
+	</code></div>
+
+
+	<br>
+	<div class="field">
+		<input class="ui button primary" type="submit" value="Изменить">
+	</div>
+</form>

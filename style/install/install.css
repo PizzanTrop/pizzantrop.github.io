@@ -1,0 +1,19 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0 auto;
+	width: 50%;
+	background: #EAEAEA;
+}
+
+.page {
+	margin: 0 auto;
+	width: 40%;
+}
+
+.field {
+	margin-bottom: 10px;
+}

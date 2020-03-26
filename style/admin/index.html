@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- KobaltMR -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><?php echo $page['title']; ?> - ПУ</title>
+
+	<link rel="stylesheet" type="text/css" href="style/css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="style/css/admin.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="style/js/semantic.min.js"></script>
+</head>
+<body>
+	<nav class="ui inverted large vertical menu">
+		<div class="ui center aligned container logo">
+			<a id="logo" data-content="Перейти на сайт" href="/"><?php echo $config['main']['site_name']; ?></a>
+		</div>
+		<div class="ui divider"></div>
+		<a href="#" class="item text-center">Функции:</a>
+		<a class="item<?php echo ($page['pid'] == "info") ? ' active' : '' ?>" href="?mode=info">Информация</a>
+		<a class="item<?php echo ($page['pid'] == "goods") ? ' active' : '' ?>" href="?mode=goods">Товары</a>
+		<a class="item<?php echo ($page['pid'] == "cupons") ? ' active' : '' ?>" href="?mode=cupons">Купоны</a>
+		<a class="item<?php echo ($page['pid'] == "payments") ? ' active' : '' ?>" href="?mode=payments">Платежи</a>
+		<a class="item<?php echo ($page['pid'] == "users") ? ' active' : '' ?>" href="?mode=users">Пользователи</a>
+		<a href="#" class="item text-center">Настройки:</a>
+		<a class="item<?php echo ($page['pid'] == "settings") ? ' active' : '' ?>" href="?mode=settings">Основное</a>
+		<a class="item<?php echo ($page['pid'] == "advert") ? ' active' : '' ?>" href="?mode=advert">Объявление</a>
+		<a class="item<?php echo ($page['pid'] == "merchant") ? ' active' : '' ?>" href="?mode=settings&id=merchant">Мерчант</a>
+		<a class="item<?php echo ($page['pid'] == "rcon") ? ' active' : '' ?>" href="?mode=settings&id=rcon">RCON</a>
+		<div class="ui divider"></div>
+		<a href="?do=logout" class="item text-center">Выйти</a>
+	</nav>
+
+	<div class="content">
+		<?php echo MessageShow(); ?>
+		<div class="ui raised segments">
+			<div class="ui segment title">
+				<p><?php echo $page['title']; ?>:</p>
+			</div>
+			<div class="ui segment">
+				<?php echo $page['content']; ?>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#logo').popup();
+	</script>
+</body>
+</html>
+<!-- KobaltMR -->

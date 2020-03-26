@@ -1,0 +1,28 @@
+<h3 class="ui header">RCON настройки:</h3>
+<p><?php echo $r_res; ?></p>
+<p><a href="?mode=settings&id=rcon&test=test" class="ui button positive fluid">Проверить подключение</a></p>
+<form method="POST">
+	<div class="field">
+		<label for="rcon_host">Хост:</label>
+		<div class="ui input fluid">
+			<input name="rcon_host" id="rcon_host" type="text" value="<?php echo $config['server']['rcon_host']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="rcon_port">Порт:</label>
+		<div class="ui input fluid">
+			<input name="rcon_port" id="rcon_port" type="text" value="<?php echo $config['server']['rcon_port']; ?>">
+		</div>
+	</div>
+	<div class="field">
+		<label for="rcon_password">Пароль:</label>
+		<div class="ui input fluid">
+			<input name="rcon_password" id="rcon_password" type="password" placeholder="СКРЫТ">
+		</div>
+	</div>
+
+	<br>
+	<div class="field">
+		<input class="ui button primary" value="Сохранить" type="submit">
+	</div>
+</form>
