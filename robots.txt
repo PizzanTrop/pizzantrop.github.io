@@ -1,5 +1,6 @@
 RewriteEngine On
 RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+RewriteCond %{HTTPS} !=on
 User-agent: *
 Host: ugw.su
 Disallow: /assets
